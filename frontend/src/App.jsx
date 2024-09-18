@@ -38,6 +38,10 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import SignupPage from './pages/SignupPage';
+import Dashboard from './pages/Dashboard';
+import UserList from './pages/UserList';
+
+
 
 
 function App() {
@@ -47,6 +51,8 @@ function App() {
         <Route path="/" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/" element={<LoginPage />} /> {/* Redirect to login as the initial page */}
+        <Route path="/users" component={UserList} />
+        <Route path="/dashboard" element={< Dashboard/>} />
       </Routes>
     </Router>
   );
